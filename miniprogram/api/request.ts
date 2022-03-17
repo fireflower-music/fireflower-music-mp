@@ -4,7 +4,7 @@ export const get = (uri: string) => {
   wx.showLoading({
     title: "Loading..."
   })
-  return new Promise((resole, reject) => {
+  return new Promise<any>((resole, reject) => {
     wx.request({
       url: baseUrl + uri,
       method: 'GET',
