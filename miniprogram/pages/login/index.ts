@@ -1,3 +1,5 @@
+import { login } from "../../api/user"
+
 // pages/login/index.ts
 Page({
 
@@ -5,6 +7,18 @@ Page({
    * 页面的初始数据
    */
   data: {
+    username: '',
+    password: ''
+  },
+
+  /**
+   * 登录
+   */
+  onLogin() {
+    login({
+      username: this.data.username,
+      password: this.data.password
+    })
 
   },
 
